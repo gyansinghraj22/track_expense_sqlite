@@ -1,0 +1,23 @@
+name: Android
+#
+on:
+    #2
+    push:
+        branches: ['main']
+    pull_request:
+        branches: ['main']
+
+    #3
+    workflow_dispatch:
+
+#4
+jobs:
+    #5
+    build:
+        #6
+        runs-on: ubuntu-latest
+
+        #7
+        steps:
+            - uses: actions/checkoutv3
+

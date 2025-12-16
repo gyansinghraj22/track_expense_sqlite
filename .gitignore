@@ -1,75 +1,75 @@
-# Miscellaneous
-*.class
-*.log
-*.pyc
-*.swp
-.DS_Store
-.atom/
-.buildlog/
-.history
-.svn/
-migrate_working_dir/
-
-# IntelliJ related
-*.iml
-*.ipr
-*.iws
-.idea/
-
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
-
-# Flutter/Dart/Pub related
-**/doc/api/
-**/ios/Flutter/.last_build_id
-.dart_tool/
-.flutter-plugins
-.flutter-plugins-dependencies
-.pub-cache/
-.pub/
+# --- General Flutter / Dart ---
 /build/
-
-# Symbolication related
-app.*.symbols
-
-# Obfuscation related
-app.*.map.json
-
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
-
-
-# Flutter/Dart
 .dart_tool/
-.flutter-plugins
-.flutter-plugins-dependencies
 .packages
-.pub-cache/
-.pub/
-/build/
+.flutter-plugins
+.flutter-plugins-dependencies
 
-# Android
-/android/.gradle/
-/android/app/build/
-/android/local.properties
-
-# iOS
-/ios/Pods/
-/ios/Flutter/Flutter.framework
-/ios/Flutter/App.framework
-/ios/build/
-
-# IDEs
+# --- IDE Files (Optional but Recommended) ---
 .idea/
-*.iml
 .vscode/
 
-# Misc
-*.log
-*.class
-*.swp
-.DS_Store
+# --- Platform Specific Files ---
+# Android
+/android/local.properties
+/android/.gradle/
+/android/key.jks
+/android/keystores/
+/android/build/
+/android/app/build/
+/android/app/*.iml
+/android/.idea/
+/android/gradle-wrapper-v7.5/
+# Hides the platform-specific build outputs
+/android/app/src/main/assets/flutter_assets/
+/android/app/src/main/kotlin/
+/android/app/src/main/res/
+
+# iOS / macOS
+/ios/Flutter/Generated.xcconfig
+/ios/Pods/
+/ios/.symlinks/
+/ios/build/
+/ios/DerivedData/
+/ios/Runner/*.xcworkspace
+/ios/Runner/*.xcodeproj/project.xcworkspace/
+/ios/Runner/*.xcodeproj/xcuserdata/
+
+/macos/build/
+/macos/Pods/
+
+# Web
+/web/index.html.bak
+/web/favicon.ico.bak
+
+# Windows
+/windows/flutter/generated_plugins.cmake
+
+# Linux
+/linux/flutter/generated_plugins.cmake
+
+# --- SECURITY & ENVIRONMENT (CRITICAL FOR FIREBASE/SECRETS) ---
+
+# 1. Firebase Configuration (MUST HIDE)
+# Hides the main configuration files for both platforms
+/android/app/google-services.json
+/ios/Runner/GoogleService-Info.plist
+
+# 2. Local Environment Variables
+# Hides any environment variable files used locally
+.env
+.env.*
+
+# 3. Code Generation (Hide generated files unless you rely on them being tracked)
+# The *.g.dart is for packages like json_serializable or Hive, which are usually generated locally.
+# If you are using freezed or hive, you might want to hide *.g.dart files and run the generator on deployment.
+# If you are only using bloc/riverpod code generation, often you want to keep them.
+# Use this line ONLY if you intend to regenerate all files on every machine:
+# **/*.g.dart
+
+# 4. Git ignored files
+.gitignore
+
+# --- Test and Analysis Artifacts ---
+/coverage/
+.melos/

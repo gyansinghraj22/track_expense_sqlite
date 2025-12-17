@@ -1,0 +1,1 @@
+/home/gyan/Desktop/flutter/track_expense/build/app/intermediates/cxx/Debug/2q692329/obj/x86
